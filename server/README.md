@@ -1,5 +1,7 @@
 # References
 **Introduction to Websocket** - https://blog.teamtreehouse.com/an-introduction-to-websockets<br>
+**Websocket with Typescript from Scratch** - https://dhruv-saksena.medium.com/websocket-development-with-typescript-from-scratch-782436d3e3be<br>
+**Webssocket using Typescript** - https://medium.com/@vitaliykorzenkoua/working-with-websocket-in-node-js-using-typescript-1aebb8a06bd6<br>
 **Simple Websocket Client** - https://github.com/ticofab/simple-websocket-client/blob/master/echo.html<br>
 **Websocket with query parameters** - https://stackoverflow.com/questions/24933593/is-there-a-way-to-send-meta-data-when-opening-a-websocket<br>
 **Question: Reconnect Websocket** - https://stackoverflow.com/questions/22431751/websocket-how-to-automatically-reconnect-after-it-dies<br>
