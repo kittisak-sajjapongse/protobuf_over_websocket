@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "lib": ["es6", "dom"],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "sourceMap": true,
+      "outDir": "./build"
+    },
+    "files": [
+      "src/server.ts",
+      "src/client.ts"
+    ]
+  }

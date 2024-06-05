@@ -1,0 +1,21 @@
+{
+  "name": "websocket_server",
+  "version": "1.0.0",
+  "description": "Websocket server that uses protobuf to send metadata and an image to a client",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node ./build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kittisak Sajjapongse",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "protobufjs": "^7.3.0",
+    "ws": "^8.17.0"
+  }
+}
