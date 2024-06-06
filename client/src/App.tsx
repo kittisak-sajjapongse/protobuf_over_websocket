@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import { ImageMessage } from './proto/image'
 
 function App() {
   const [messages, setMessages] = useState<string[]>([]);
+  const imageMsg: ImageMessage = {
+    messageUuid: 123,
+    description: "dsfdsf"
+  };
+  console.log(imageMsg);
 
   function appendMessage(message: string) {
     setMessages((prevMessages) => {
@@ -13,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const ws = new WebSocket('ws://localhost:12345?param1=THE_VALUE_OF_PARAM1');
-    ws.onopen = (event: any) => {
+    ws.onopen = () => {
       console.log('Connected to server');
       appendMessage('Connected to server');
       ws.send('Hello, server!');
@@ -24,7 +30,7 @@ function App() {
       appendMessage(`Received message from server: ${event.data}`);
     };
     
-    ws.onclose = (event: any) => {
+    ws.onclose = () => {
       console.log('Disconnected from server');
       appendMessage('Disconnected from server');
     };

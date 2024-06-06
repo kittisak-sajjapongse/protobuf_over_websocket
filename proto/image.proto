@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message BinaryContent {
+    bytes data = 1;
+}
+
+message ImageMessage {
+  uint32 message_uuid = 1;
+  string description = 2;
+  BinaryContent binContent = 3;
+}
