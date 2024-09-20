@@ -32,9 +32,9 @@ wss.on("connection", (ws: WebSocket, req) => {
     };
 
     var images = [
-      { filename: "src/red_bunny.jpg", id: 1, description: "Red Bunny" },
-      { filename: "src/puppy.jpg", id: 2, description: "Puppy" },
-      { filename: "src/bear_cub.jpg", id: 3, description: "Bear" },
+      { filename: "bunnies.jpg", id: 1, description: "Red Bunny" },
+      { filename: "puppies.jpg", id: 2, description: "Puppy" },
+      { filename: "bear_cubs.jpg", id: 3, description: "Bear" },
     ];
     var theLoop: (i: number) => void = (i: number) => {
       setTimeout(() => {

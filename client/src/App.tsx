@@ -6,7 +6,7 @@ function App() {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:12345?param1=THE_VALUE_OF_PARAM1");
+    const ws = new WebSocket(`ws://${window.location.hostname}:12345?param1=THE_VALUE_OF_PARAM1`);
     ws.onopen = () => {
       console.log("Connected to server");
       // Send a message to the server to trigger it
@@ -28,7 +28,7 @@ function App() {
         console.log(`description: ${imageMsg.description}`);
 
         // Convert the binary content to a Blob and create a data URL.
-        const blob = new Blob([imageMsg.binContent.data], {
+        const blob = new Blob([imageMsg.binContent!.data], {
           type: "image/jpeg",
         });
         const imageUrl = URL.createObjectURL(blob);
