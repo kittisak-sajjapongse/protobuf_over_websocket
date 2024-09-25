@@ -6,12 +6,16 @@ function App() {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
 
   useEffect(() => {
-    const ws = new WebSocket(`ws://${window.location.hostname}:12345?param1=THE_VALUE_OF_PARAM1`);
+    // ********************* Important note: *********************
+    // WSS requires the server to be accessed using domain names.
+    // Client with WSS will fail to connect using IP addresses.
+
+    // Uncomment below if secure websocket (wss) is to be used.
+    // const ws = new WebSocket(`wss://${window.location.hostname}:12346`);
+    const ws = new WebSocket(`ws://${window.location.hostname}:12345`);
     ws.onopen = () => {
       console.log("Connected to server");
-      // Send a message to the server to trigger it
-      // to stream the image through websocket.
-      ws.send("Hello, server!");
+      ws.send("Hello");
     };
 
     ws.onmessage = (event: any) => {
